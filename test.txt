@@ -21,7 +21,7 @@
 19 git diff   文件比对
 20 git add .  所有文件
 21 git status -s   查看修改的文件（绿色）
-22 git diff —cached  文件比对状态
+22 git diff —-cached  文件比对状态
 23 git diff HEAD     查看已经修改的状态staged
 
 撤销回到从前：
@@ -35,19 +35,42 @@
   git reset --hard HEAD^^  回到上两个状态
   git reset --hard HEAD^^^ 回到上三个状态
   git reset --hard HEAD~100 回到前一百个状态 数字可以自定
+  git reset --hard 71dsdss  也可以指定状态码
+  git reflow  查看所有状态码   回到指定的状态
+6 checkout
+  git checkout 123ddss —- text2.txt  指定ID回到原来的状态
+
+branch 分支：
+
+1 git log --oneline --graph   查看所有分支
+
+2 git branch dev  创建分支dev 表示develop 开发
+ 
+  git branch     查看所有分支状态
+  git checkout dev 切换到分支
+
+3  第二种创建分支 并且直接切换到分支上
+   git checkout -b dev
+   git branch   查看分支状态 现在已经在分支上了
+
+4 
+
+5删除分支需要先切换到主分支
+  1 git checkout master  切换到主分支
+  2 git branch -d dev    删除分支
+  3 git commit -am "change 3 in dev"  给分支添加备注，前提这个文件是已经git add过的
+  4 git checkout master 切换到主分支
 6
+
 7
+
 8
+
 9
+
 10
+
+
 11
-12
-13
-14
-15
-16
-17
-18
-19
-20
+
 
