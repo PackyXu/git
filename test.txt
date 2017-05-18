@@ -58,7 +58,8 @@ branch 分支：
 5删除分支需要先切换到主分支
   1 git checkout master  切换到主分支
   2 git branch -d dev    删除分支
-
+  3 git commit -am "change 3 in dev"  给分支添加备注，前提这个文件是已经git add过的
+  4 git checkout master 切换到主分支
 6
 
 7

@@ -30,7 +30,7 @@
 2 git add  test2.txt   新建一个文件在不改变原始文件内容的前提下 重新commit
   git commit -amend  —no-edit 	
 3 git rest test.txt    回到前一个状态
-4
+4 git log —online     
 5
 6
 7
