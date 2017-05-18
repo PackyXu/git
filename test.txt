@@ -1,0 +1,40 @@
+1 cd ~
+2 cd ~/Documents    进入git所在目录
+3 cd git
+4 git config --global username "onTheRoad"    设置管理员名字
+5 git config --global useremail “youngxury@gmail.com”  设置管理员邮箱
+6 git config user.name   查看管理员名字
+7 git config user.email  查看管理员邮箱
+8 git init     初始化
+9 ls -a        插卡看当前库git下的所有文件
+10 open git   打开git
+11 touch test.txt   创建文件
+12 git status       查看状态
+13 git add test.txt 添加文件
+14 git status       查看状态
+15 git log   查看log日志
+16 git add test.txt    添加文件
+17 git commit -m “change 1”   添加状态标识
+18 git status -s  查看状态
+19 git diff   文件比对
+20 git add .  所有文件
+21 git status -s   查看修改的文件（绿色）
+22
+23
+24
+25
+26
+27 
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
