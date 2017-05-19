@@ -101,11 +101,36 @@ branch 分支：
   cd ~/Documents/git/
 
   git remote add origin https://github.com/YoungMRX/git.git
-
   git push -u origin master
 
+  注意：如果在推送过程中报错：
+	fatal: remote origin already exists.
+	或者：
+        To https://github.com/YoungMRX/demo.git
+ 	! [rejected]        master -> master (fetch first)
+	error: failed to push some refs to 'https://github.com/YoungMRX/demo.git'
+	hint: Updates were rejected because the remote contains work that you do
+	hint: not have locally. This is usually caused by another repository pushing
+	hint: to the same ref. You may want to first integrate the remote changes
+	hint: (e.g., 'git pull ...') before pushing again.
+	hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
-10
+	
+	输入:git remote rm origin  删除
+       
+	重新输入:
+	git remote add origin https://github.com/YoungMRX/git.git
+	
+	git push -u origin master
+
+
+  本地文件修改后 再推到GitHub:
+
+   git commit -am “change 5”
+	
+   git push -u origin master
+
+  
 
 
 11
