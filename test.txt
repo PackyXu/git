@@ -37,36 +37,73 @@
   git reset --hard HEAD~100 回到前一百个状态 数字可以自定
   git reset --hard 71dsdss  也可以指定状态码
   git reflow  查看所有状态码   回到指定的状态
-6 checkout
+6 checkout：
+
   git checkout 123ddss —- text2.txt  指定ID回到原来的状态
 
 branch 分支：
 
 1 git log --oneline --graph   查看所有分支
 
-2 git branch dev  创建分支dev 表示develop 开发
+2 git branch dev  创建分支dev 表示develop 开发：
  
   git branch     查看所有分支状态
   git checkout dev 切换到分支
+  git commit -am "change 3 in dev"  
+  git checkout master 切换到主分支
+  git merge  --no-ff -m "keep merge info" dev  将分支文件合并到主分支
+  git log --oneline --graph    查看主分支状态
 
-3  第二种创建分支 并且直接切换到分支上
+3  第二种创建分支 并且直接切换到分支上：
+
    git checkout -b dev
    git branch   查看分支状态 现在已经在分支上了
 
 4 
 
-5删除分支需要先切换到主分支
+5删除分支需要先切换到主分支：
   1 git checkout master  切换到主分支
   2 git branch -d dev    删除分支
+  git branch -D dev      强行删除分支
   3 git commit -am "change 3 in dev"  给分支添加备注，前提这个文件是已经git add过的
   4 git checkout master 切换到主分支
-6
 
-7
+6 merge conflict  冲突：
 
-8
+  git merge dev 
+  git commit -am “solve conflict”  重新添加
+  git log —online  —graph  查看
+ 
 
-9
+7 rebase 分支冲突 （比较危险）： 
+
+  git rebase dev
+  git branch
+  git add test.txt
+  git rebase —-continue (运行) 
+  也可以选择跳过或终止：[git rebase —-skip 跳过,git rebase —abort 终止]
+
+  git log —online  —graph  查看
+
+ 
+  
+
+
+8 stash 临时修改：
+ 
+  git checkout dev
+  git status -s
+  git stash     暂放在一边
+  git stash pop  返回暂存的文件
+
+9 giuhub 将本地git项目推到GitHub
+  
+  cd ~/Documents/git/
+
+  git remote add origin https://github.com/YoungMRX/git.git
+
+  git push -u origin master
+
 
 10
 
